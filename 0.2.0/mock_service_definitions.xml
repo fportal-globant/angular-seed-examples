@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mockservice version="1.0" xml:lang="en-US">
+<proxy_settings proxy_enabled="false" proxy_url=""/>
+<serviceref file="/Users/andres/Projects/Angular/SeedExamples/0.2.0/mockey_def_depot/Albums/Albums.xml"/>
+<serviceref file="/Users/andres/Projects/Angular/SeedExamples/0.2.0/mockey_def_depot/Songs/Songs.xml"/>
+</mockservice>
