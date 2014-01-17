@@ -1,0 +1,17 @@
+.songs-list{
+    background: #e3e3e3;
+    border-radius: 4px;
+
+    margin-top: 20px;
+
+    li{
+        padding: 10px 20px;
+
+        span{
+            &:not(:last-child):after {
+                content: " |";
+                color: #AAA;
+            }
+        }
+    }
+}

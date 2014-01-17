@@ -1,0 +1,22 @@
+<div class="songs-list" ng-repeat="album in albums.albums | filter:albumFilter">
+    
+    <ul class="js-songs-list">
+        <li ng-repeat="song in album.songs">
+            <div ng-show="song.moreinfo">
+                <a href="#/albums/{{album.id}}/{{song.id}}">
+                    <span>{{song.title}}</span>
+                    <span ng-repeat="name in song.leadVocals">{{name}}</span>
+                    <span>{{song.length}}</span>
+                </a>
+            </div>
+            <div ng-hide="song.moreinfo">
+                <span>{{song.title}}</span>
+                <span ng-repeat="name in song.leadVocals">{{name}}</span>
+                <span>{{song.length}}</span>
+            </div>
+        </li>
+    </ul>
+
+    <div ui-view="song-details-view"></div>
+
+</div>
