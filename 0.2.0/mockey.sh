@@ -1,1 +1,2 @@
-java -jar tools/mockey/Mockey.jar
+cd tools/mockey/
+java -jar Mockey.jar --location .
