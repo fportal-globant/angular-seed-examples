@@ -277,6 +277,12 @@ module.exports = function (grunt) {
                 }
             }
         },
+        ngtemplates: {
+            app: {
+                src: '**.html',
+                dest: 'templates.js'
+            }
+        },
         htmlmin: {
             dist: {
                 options: {
@@ -613,6 +619,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'jshint',
         'test',
-        'build'
+        'build',
+        'ngtemplates'
     ]);
 };
