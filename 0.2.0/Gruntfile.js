@@ -562,7 +562,7 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadTasks('grunt-tasks');
+    grunt.loadTasks('grunt-tasks','grunt-angular-templates');
 
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {
