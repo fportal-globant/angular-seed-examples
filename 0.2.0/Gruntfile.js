@@ -279,8 +279,14 @@ module.exports = function (grunt) {
         },
         ngtemplates: {
             app: {
-                src: '**.html',
-                dest: 'templates.js'
+                cwd: '<%= config.app %>/features/',
+                src: '**/*.html',
+                dest: '<%= config.app %>/features/compiled_templates.js',
+                options: {
+                    source: function(source, url) {
+                        return "<!-- Template: " + url + " -->\n" + source;
+                    }
+                }
             }
         },
         htmlmin: {
@@ -570,10 +576,11 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
-            'jshint',
-            'compass:dev',
+            //'jshint',
+            //'compass:dev',
             'csslint',
             'concat:cssDev',
+            'ngtemplates',
             'clean:devCss',
             'clean:server',
             // 'concurrent:server',
@@ -604,6 +611,7 @@ module.exports = function (grunt) {
         'clean:dist',
         'compass:dist',
         'clean:devCss',
+        'ngtemplates',
         'useminPrepare',
         'concurrent:dist',
         'concat',
@@ -619,7 +627,6 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'jshint',
         'test',
-        'build',
-        'ngtemplates'
+        'build'
     ]);
 };
