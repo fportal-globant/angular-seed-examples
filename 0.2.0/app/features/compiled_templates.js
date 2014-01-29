@@ -1,20 +1,20 @@
 angular.module('app').run(['$templateCache', function($templateCache) {
   'use strict';
 
-  $templateCache.put('albumsList/views/albumsList.tpl.html',
-    "<!-- Template: app/features//albumsList/views/albumsList.tpl.html -->\n" +
-    "<h1>PRUEBA</h1>\n" +
+  $templateCache.put('features/albumsList/views/albumsList.tpl.html',
+    "<!-- Template: app//features/albumsList/views/albumsList.tpl.html -->\n" +
+    "<h1>{{albums.band}}</h1>\n" +
     "<ul class=\"js-albums-list\">\n" +
     "    <li ng-repeat=\"album in albums.albums\">\n" +
     "        <a href=\"#/albums/{{album.id}}\">{{album.title}}</a>\n" +
     "    </li>\n" +
     "</ul>\n" +
-    "<div ui-view=\"album-list-view\"></div>"
+    "<div ui-view=\"album-list-view\"></div>\n"
   );
 
 
-  $templateCache.put('songDetails/views/songDetails.tpl.html',
-    "<!-- Template: app/features//songDetails/views/songDetails.tpl.html -->\n" +
+  $templateCache.put('features/songDetails/views/songDetails.tpl.html',
+    "<!-- Template: app//features/songDetails/views/songDetails.tpl.html -->\n" +
     "<div class=\"js-song-details song-details\">\n" +
     "    <hr>\n" +
     "    <a ng-click=\"hideDetails();\">Hide details</a>\n" +
@@ -26,8 +26,8 @@ angular.module('app').run(['$templateCache', function($templateCache) {
   );
 
 
-  $templateCache.put('songsList/views/songsList.tpl.html',
-    "<!-- Template: app/features//songsList/views/songsList.tpl.html -->\n" +
+  $templateCache.put('features/songsList/views/songsList.tpl.html',
+    "<!-- Template: app//features/songsList/views/songsList.tpl.html -->\n" +
     "<div class=\"songs-list\" ng-repeat=\"album in albums.albums | filter:albumFilter\">\n" +
     "    \n" +
     "    <ul class=\"js-songs-list\">\n" +

@@ -51,7 +51,7 @@
     <script src="common/directives/force-integer-value.js"></script>
     <script src="common/filters/filters.js"></script>
     <script src="features/app.js"></script>
-    <script src="features/compiled_templates.js"></script>
+    <script type="text/ng-template" src="features/compiled_templates.js"></script>
     <script src="features/albumsList/albumsList.js"></script>
     <script src="features/albumsList/controllers/albumsList.js"></script>
     <script src="features/albumsList/services/albumsList.js"></script>
@@ -62,5 +62,6 @@
     <script src="features/songsList/controllers/songsList.js"></script>
     <!-- endbuild -->
 
+    <div ng-include="'features/albumsList/views/albumsList.tpl.html'"></div>
 </body>
 </html>

@@ -279,8 +279,8 @@ module.exports = function (grunt) {
         },
         ngtemplates: {
             app: {
-                cwd: '<%= config.app %>/features/',
-                src: '**/*.html',
+                cwd: '<%= config.app %>/',
+                src: 'features/**/*.html',
                 dest: '<%= config.app %>/features/compiled_templates.js',
                 options: {
                     source: function(source, url) {
